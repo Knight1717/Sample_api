@@ -39,13 +39,13 @@ class _UserDetailsPageState extends State<UserDetailsPage> {
               return ListView.separated(
                 itemCount: items.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      
-                    ),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: ListTile(
-                      tileColor: Colors.yellowAccent.shade100,
+                      tileColor: Color(0xffBFDBFE),
+                      shape: RoundedRectangleBorder(
+                      side: const BorderSide(color: Colors.transparent),
+                        borderRadius: BorderRadius.circular(12)),
                       leading: Text(
                         items[index].id.toString(),
                         style: const TextStyle(fontSize: 20),
@@ -57,7 +57,7 @@ class _UserDetailsPageState extends State<UserDetailsPage> {
                 },
                 separatorBuilder: (context, index) {
                   return const SizedBox(
-                    height: 10,
+                    height: 12,
                   );
                 },
               );
